@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+       
+    <link rel="icon" href="images/favicon.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"  rel="stylesheet"  />
+  
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+
+  <body>
+                                                                                                                    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-md dinner-navbar">
+      <div class="container-lg">
+
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <span class="dinner-logo me-3">
+            <i class="fa-solid fa-utensils"></i>
+          </span>
+          <span>
+            <span class="d-block fs-4 fw-bold lh-sm text-gray"  >What's For Dinner</span  >
+            <p class="d-block dinner-subtitle text-gray-500">  Your daily meal inspiration </p>
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler menu-btn collapsed border-0 shadow-none"
+          type="button"  data-bs-toggle="collapse"  data-bs-target="#dinnerMenu" >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end"
+          id="dinnerMenu" >
+          <hr class="d-md-none menu-line mb-0 mt-3" />
+          <ul  class="navbar-nav align-items-md-center gap-3 mt-3 mt-md-0 pb-3 pb-md-0 ps-3 ps-md-0"  >
+            <li class="nav-item">
+              <a class="nav-link dinner-nav-link py-0 py-md-2" href="#">
+                <i class="fa-solid fa-bookmark fa-fw fs-5 me-3 me-md-0">
+               </i ><span class="d-md-none">Saved Recipes</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link dinner-nav-link py-0 py-md-2" href="#">
+                <i  class="fa-solid fa-clock-rotate-left fa-fw fs-5 me-3 me-md-0" >
+                  </i> <span class="d-md-none">Recent</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link dinner-nav-link py-0 py-md-2" href="#">
+                <i class="fa-solid fa-gear fa-fw fs-5 me-3 me-md-0">
+                  </i ><span class="d-md-none">Settings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a   class="nav-link dinner-nav-link d-flex align-items-center py-0 py-md-2"
+                href="#"  >
+                <img  src="images/avatar-2.jpg"  alt="Profile"
+                  class="dinner-avatar me-3 me-md-0"  />
+                <span class="d-md-none">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+                                                                                                                         <!-- Main    -->
+    <main class="container-lg px-4 px-md-3 pt-4 pb-4 pb-md-5">
+      <section id="mealSection" class="meal-card">
+        <div class="row g-0">
+       
+          <div class="col-lg-5 meal-image-box">
+            <div class="meal-photo">
+              <img id="mealImage" class="meal-image" src="" alt="meal" />
+
+             
+              <div class="meal-rating">
+                <i class="fa-solid fa-star text-warning me-1"></i>
+                <strong id="mealRating">4.8</strong>
+                <small class="text-secondary ms-1" id="mealReviews" >(0 reviews)</small >
+              </div>
+            </div>
+
+            
+            <div class="meal-stats">
+              <div class="row text-center g-2">
+                <div class="col-4">
+                  <i class="fa-solid fa-clock stat-icon text-warning"></i>
+                  <small class="d-block text-secondary">Prep Time</small>
+                  <strong id="mealPrep">15 min</strong>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-fire-burner stat-icon text-danger"></i>
+                  <small class="d-block text-secondary">Cook Time</small>
+                  <strong id="mealCook">20 min</strong>
+                </div>
+                <div class="col-4">
+                  <i class="fa-solid fa-users stat-icon text-primary"></i>
+                  <small class="d-block text-secondary">Servings</small>
+                  <strong id="mealServings">4 people</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-7 p-3 p-md-4 p-lg-5 overflow-auto"
+            style="max-height: 700px" >
+          
+            <div  class="d-flex flex-column-reverse flex-md-row justify-content-between gap-3 mb-3" >
+              <div>
+                <div class="mb-3">
+                  <span  id="mealDifficulty"
+                    class="badge rounded-pill badge-level me-2" >Easy</span >
+                  <span id="mealCategory"  class="badge rounded-pill badge-category" >Italian</span >
+                </div>
+                <h2 id="mealName" class="display-6 fw-bold text-dark">
+                  Meal name
+                </h2>
+                <p id="mealDescription" class="text-secondary mb-0">
+                  Description
+                </p>
+              </div>
+
+              <div class="d-flex gap-2 align-self-end align-self-md-start">
+                <button class="btn icon-btn">
+                  <i class="fa-solid fa-bookmark"></i>
+                </button>
+                <button class="btn icon-btn">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </button>
+              </div>
+            </div>
+
+            
+            <div id="timeWarning" class="alert time-warning d-none" role="alert" >
+              <i class="fa-solid fa-triangle-exclamation me-3 fs-5"></i>
+              <div>
+                <strong class="d-block">Extended Preparation Time</strong>
+                <small >This recipe requires more than 45 minutes to prepare. Plan
+                  accordingly!</small >
+              </div>
+            </div>
+
+            
+            <ul  class="nav nav-tabs dinner-tabs nav-fill flex-nowrap mb-4" role="tablist" >
+              <li class="nav-item">
+                <button class="nav-link px-1 px-sm-3 active"
+                  data-bs-toggle="tab" data-bs-target="#tabIngredients">
+                  <i class="fa-solid fa-list-check d-none d-sm-inline me-1">
+
+                  </i ><small>Ingredients</small>
+                </button>
+              </li>
+
+              <li class="nav-item">
+                <button  class="nav-link px-1 px-sm-3" data-bs-toggle="tab"
+                  data-bs-target="#tabInstructions"  >
+                  <i class="fa-solid fa-book-open d-none d-sm-inline me-1">
+                </i ><small>Instructions</small>
+                </button>
+              </li>
+
+              <li class="nav-item">
+                <button  class="nav-link px-1 px-sm-3"
+                  data-bs-toggle="tab"  data-bs-target="#tabNutrition"  >
+                  <i class="fa-solid fa-chart-pie d-none d-sm-inline me-1"></i> 
+                  <small>Nutrition</small>
+                </button>
+              </li>
+
+              <li class="nav-item">
+                <button  class="nav-link px-1 px-sm-3"
+                  data-bs-toggle="tab"  data-bs-target="#tabTips">
+                  <i class="fa-solid fa-lightbulb d-none d-sm-inline me-1"></i >
+                  <small>Chef's Tips</small>
+                </button>
+              </li>
+            </ul>
+
+            
+            <div class="tab-content tabs-scroll">
+              
+              <div class="tab-pane fade show active" id="tabIngredients">
+                <div class="ingredients-box">
+                  <ul id="ingredientsList" class="list-unstyled mb-0"></ul>
+                </div>
+              </div>
+
+              
+              <div class="tab-pane fade" id="tabInstructions">
+                <div id="instructionsList"></div>
+              </div>
+
+              
+              <div class="tab-pane fade" id="tabNutrition">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="nutri-item">
+                      <span> <i class="fa-solid fa-fire nutri-icon bg-orange-soft text-warning"  >
+                        </i >Calories</span >
+                      <strong id="nCalories"></strong>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="nutri-item">
+                      <span> <i class="fa-solid fa-dumbbell nutri-icon bg-blue-soft text-primary"> 
+                        </i>Protein</span >
+                      <strong id="nProtein"></strong>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="nutri-item">
+                      <span >
+                        <i class="fa-solid fa-wheat-awn nutri-icon bg-yellow-soft text-warning">
+                          </i>Carbohydrates</span >
+                      <strong id="nCarbs"></strong>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="nutri-item">
+                      <span><i class="fa-solid fa-droplet nutri-icon bg-red-soft text-danger" >
+                        </i >Fat</span >
+                      <strong id="nFat"></strong>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="nutri-item">
+                      <span ><i class="fa-solid fa-seedling nutri-icon bg-green-soft text-success" >
+                        </i >Fiber</span >
+                      <strong id="nFiber"></strong>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="nutri-item">
+                      <span ><i class="fa-solid fa-cube nutri-icon bg-pink-soft text-danger"  >
+                        </i >Sodium</span >
+                      <strong id="nSodium"></strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tabTips">
+                <div id="tipsList"></div>
+              </div>
+            </div>
+
+         
+            <div class="pt-4 mt-4 border-top">
+              <button id="anotherBtn" class="btn btn-dinner">
+                <i class="fa-solid fa-rotate me-2"></i>Try Another Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+   
+    <script src="js/script.js"></script>
+  </body>
+</html>
